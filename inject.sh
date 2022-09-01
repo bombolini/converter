@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "default apache directory has been set to /home/html in my case
 echo "all fake video files will be created under /home/html/mov directory
 echo "variable defitinition starts here:"
