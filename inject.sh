@@ -1,14 +1,16 @@
 #!/bin/bash
 echo "default apache directory has been set to /home/html in my case
-echo "all fake video files will be created under /home/html/mov directory
+echo "all fake video files will be created under /home/html/mov/ directory
 echo "variable defitinition starts here:"
-mkdir test #you can change directory name as you wish in this line.
-input='' #your input m3u filename, example: 'test.m3u'
-echo "my test.m3u file format is like EXTINF:-1, if yours is different, edit "15th line" before running this script.
-url='' #url with port & without http://, sample: 'example.com:8888'
-username='' #assigned username comes here
-password='' #assigned password 
+mkdir /home/html/mov
+cd /home/html/mov
 directory='test' #create a directory named test or whatsoever you wish
+mkdir test #you can change directory name as you wish in this line.
+input='sample.m3u' #your input m3u filename
+echo "my test.m3u file format is like EXTINF:-1, if yours is different, edit "15th line" before running this script.
+url='example.com:8888' #url with port & without http://
+username='bombolini' #assigned username comes here
+password='kodi' #assigned password
 dbname='mariadb' #change db name in compatible with your sql table
 grep -A0 "EXTINF" $input > 1
 sed -i "s|#EXTINF:-1,||g" 1
